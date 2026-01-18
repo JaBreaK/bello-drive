@@ -15,6 +15,10 @@
   ],
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "/src/index.js"
+    },
+    {
       "source": "/upload(.*)",
       "destination": "/src/index.js"
     },
@@ -27,16 +31,24 @@
       "destination": "/src/index.js"
     },
     {
+      "source": "/auth(.*)",
+      "destination": "/src/index.js"
+    },
+    {
+      "source": "/admin(.*)",
+      "destination": "/src/index.js"
+    },
+    {
       "source": "/status",
       "destination": "/src/index.js"
     },
     {
       "source": "/assets/(.*)",
-      "destination": "/client/assets/$1"
+      "destination": "/client/dist/assets/$1"
     },
     {
       "source": "/(.*)",
-      "destination": "/client/index.html"
+      "destination": "/client/dist/index.html"
     }
   ]
 }

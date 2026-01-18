@@ -54,7 +54,7 @@ export const useUploadManager = (api, onUploadComplete, getAuthHeaders = () => (
     return `${m}m ${s}s`;
   };
 
-  const getResumeKey = (file) => `neko_resume_${file.name}_${file.size}_${file.lastModified}`;
+  const getResumeKey = (file) => `bello_resume_${file.name}_${file.size}_${file.lastModified}`;
 
   const handleCancel = () => {
     if (abortControllerRef.current && !abortControllerRef.current.signal.aborted) {

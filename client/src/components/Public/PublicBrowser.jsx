@@ -95,7 +95,7 @@ const PublicBrowser = ({ onSwitchToLogin }) => {
                             <Cat size={20} className="text-ctp-base" />
                         </div>
                         <div>
-                            <h1 className="text-lg font-bold text-ctp-text">Neko Drive</h1>
+                            <h1 className="text-lg font-bold text-ctp-text">Bello Drive</h1>
                             <p className="text-xs text-ctp-subtext0 flex items-center gap-1">
                                 <Globe size={12} /> Public Files
                             </p>

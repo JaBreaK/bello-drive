@@ -40,7 +40,7 @@ const Sidebar = ({ stats, view, setView, onSettingsClick, user }) => {
             <Cloud size={20} strokeWidth={2.5} />
           </div>
           <div>
-            <h1 className="text-lg font-bold text-ctp-text leading-tight">neko drive</h1>
+            <h1 className="text-lg font-bold text-ctp-text leading-tight">bello drive</h1>
             <div className="flex items-center gap-1.5 mt-0.5">
               <span className="px-1.5 py-0.5 rounded bg-ctp-mauve/20 text-ctp-mauve text-[9px] font-bold border border-ctp-mauve/30">
                 Lv.{level}

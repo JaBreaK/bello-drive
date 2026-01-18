@@ -51,7 +51,7 @@ const RegisterPage = ({ onSwitchToLogin }) => {
                         <Cat size={32} className="text-ctp-base" />
                     </div>
                     <h1 className="text-2xl font-bold text-ctp-text">Create Account</h1>
-                    <p className="text-sm text-ctp-subtext0 mt-1">Join Neko Drive</p>
+                    <p className="text-sm text-ctp-subtext0 mt-1">Join Bello Drive</p>
                 </div>
 
                 {/* Form */}

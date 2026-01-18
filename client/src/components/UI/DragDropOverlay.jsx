@@ -14,7 +14,7 @@ const DragDropOverlay = ({ isDragging }) => {
                     <UploadCloud size={80} className="text-ctp-blue" />
                 </div>
                 <h2 className="text-4xl font-bold text-ctp-text mb-3">Drop Files Here</h2>
-                <p className="text-ctp-subtext0 text-xl font-medium">Instant Upload to Neko Drive</p>
+                <p className="text-ctp-subtext0 text-xl font-medium">Instant Upload to Bello Drive</p>
             </div>
         </div>
     );

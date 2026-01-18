@@ -88,7 +88,7 @@ app.use(express.urlencoded({ extended: true, limit: "100kb" }));
 app.get("/", (req, res) => {
   res.json({
     status: "online",
-    message: "Neko Drive Backend is Running 🐱☁️",
+    message: "Bello Drive Backend is Running 😺☁️",
     version: "1.0.0",
   });
 });
@@ -127,14 +127,14 @@ const PORT = process.env.PORT || 3000;
 const { storage } = require("./services/storage");
 
 // 1. Initial Status Check
-logger.log("[Startup] Initializing Neko Drive (Supabase Mode)...");
+logger.log("[Startup] Initializing Bello Drive (Supabase Mode)...");
 
 // 2. Init Storage (Async check)
 if (process.env.NODE_ENV !== "test") {
   storage.init().then(() => {
     // 3. Start Server
     app.listen(PORT, () => {
-      logger.log(`Neko Drive backend running on http://localhost:${PORT}`);
+      logger.log(`Bello Drive backend running on http://localhost:${PORT}`);
     });
   });
 }

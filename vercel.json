@@ -1,27 +1,46 @@
 {
   "version": 2,
-  "builds": [
+  "framework": null,
+  "buildCommand": "cd client && npm install && npm run build",
+  "outputDirectory": "client/dist",
+  "installCommand": "npm install && cd client && npm install",
+  "functions": {
+    "api/index.js": {
+      "runtime": "@vercel/node@3"
+    }
+  },
+  "rewrites": [
     {
-      "src": "api/index.js",
-      "use": "@vercel/node"
+      "source": "/upload/(.*)",
+      "destination": "/api/index.js"
     },
     {
-      "src": "client/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
+      "source": "/files/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/files",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/download/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/auth/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/auth",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/admin/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/status",
+      "destination": "/api/index.js"
     }
-  ],
-  "routes": [
-    { "src": "/upload(.*)", "dest": "/api/index.js" },
-    { "src": "/files(.*)", "dest": "/api/index.js" },
-    { "src": "/download/(.*)", "dest": "/api/index.js" },
-    { "src": "/auth(.*)", "dest": "/api/index.js" },
-    { "src": "/admin(.*)", "dest": "/api/index.js" },
-    { "src": "/status", "dest": "/api/index.js" },
-    { "src": "/assets/(.*)", "dest": "/client/dist/assets/$1" },
-    { "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|gif|svg|woff|woff2))", "dest": "/client/dist/$1" },
-    { "src": "/(.*)", "dest": "/client/dist/index.html" }
   ]
 }

@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/index.js",
+      "src": "api/index.js",
       "use": "@vercel/node"
     },
     {
@@ -14,40 +14,14 @@
     }
   ],
   "routes": [
-    {
-      "src": "/upload(.*)",
-      "dest": "/src/index.js"
-    },
-    {
-      "src": "/files(.*)",
-      "dest": "/src/index.js"
-    },
-    {
-      "src": "/files",
-      "dest": "/src/index.js"
-    },
-    {
-      "src": "/download/(.*)",
-      "dest": "/src/index.js"
-    },
-    {
-      "src": "/auth(.*)",
-      "dest": "/src/index.js"
-    },
-    {
-      "src": "/admin(.*)",
-      "dest": "/src/index.js"
-    },
-    {
-      "src": "/status",
-      "dest": "/src/index.js"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/client/dist/index.html"
-    }
+    { "src": "/upload(.*)", "dest": "/api/index.js" },
+    { "src": "/files(.*)", "dest": "/api/index.js" },
+    { "src": "/download/(.*)", "dest": "/api/index.js" },
+    { "src": "/auth(.*)", "dest": "/api/index.js" },
+    { "src": "/admin(.*)", "dest": "/api/index.js" },
+    { "src": "/status", "dest": "/api/index.js" },
+    { "src": "/assets/(.*)", "dest": "/client/dist/assets/$1" },
+    { "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|gif|svg|woff|woff2))", "dest": "/client/dist/$1" },
+    { "src": "/(.*)", "dest": "/client/dist/index.html" }
   ]
 }

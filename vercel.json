@@ -1,8 +1,9 @@
 {
   "version": 2,
+  "framework": null,
   "buildCommand": "cd client && npm install && npm run build",
   "outputDirectory": "client/dist",
-  "installCommand": "npm install && cd client && npm install",
+  "installCommand": "npm install",
   "rewrites": [
     {
       "source": "/upload/(.*)",
@@ -35,6 +36,10 @@
     {
       "source": "/status",
       "destination": "/api/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

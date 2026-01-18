@@ -13,34 +13,42 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/upload(.*)",
-      "dest": "/src/index.js"
+      "source": "/upload/(.*)",
+      "destination": "/src/index.js"
     },
     {
-      "src": "/files(.*)",
-      "dest": "/src/index.js"
+      "source": "/files/(.*)",
+      "destination": "/src/index.js"
     },
     {
-      "src": "/download(.*)",
-      "dest": "/src/index.js"
+      "source": "/files",
+      "destination": "/src/index.js"
     },
     {
-      "src": "/auth(.*)",
-      "dest": "/src/index.js"
+      "source": "/download/(.*)",
+      "destination": "/src/index.js"
     },
     {
-      "src": "/admin(.*)",
-      "dest": "/src/index.js"
+      "source": "/auth/(.*)",
+      "destination": "/src/index.js"
     },
     {
-      "src": "/status",
-      "dest": "/src/index.js"
+      "source": "/auth",
+      "destination": "/src/index.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "/client/dist/$1"
+      "source": "/admin/(.*)",
+      "destination": "/src/index.js"
+    },
+    {
+      "source": "/status",
+      "destination": "/src/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/client/dist/$1"
     }
   ]
 }
